@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%-include('./layout/head.ejs')%>
+</head>
+<body>
+    <header>
+        <%-include('./layout/nav.ejs')%>
+
+    </header>
+    <main class="home-main">
+        <% senData.forEach(e=>{%> 
+            <section>
+                <h2> <%=e.character%></h2>
+                <p> <%=e.quote%></p>
+                <img src="<%=e.image%>">
+            
+               <form action="/save" method="POST">
+                <input type="hidden" name="quote" value="<%=e.quote%>">
+                <input type="hidden" name="image" value="<%=e.image%>">
+                <input type="hidden" name="character" value="<%=e.character%>">
+                <input type="hidden" name="characterDirection" value="<%=e.characterDirection%>">
+                <input type="submit" value="Favor character">
+               </form>
+            </section>
+            <%})%>
+     
+    </main>
+</body>
+</html>

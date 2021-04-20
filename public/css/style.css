@@ -1,0 +1,22 @@
+header{
+    background-image: url(.././img/the_simpsons.png);
+    background-color: #fefb1e;
+}
+html{
+    background-color: #62C8E4;
+
+    
+}
+
+.home-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fav-main{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 250px;
+}

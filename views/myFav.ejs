@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('./layout/head.ejs')%>
+        </head>
+<body>
+    <header>
+        <%-include('./layout/nav.ejs')%>
+
+    </header>
+    <main class="fav-main">
+        <% senData.forEach(e=>{%> 
+            <h1> <%=e.character%></h1>
+            <p> <%=e.quote%></p>
+            <img src="<%=e.image%>">
+           <a href="/favorite-quotes/<%=e.id%>">Show details</a>
+        <%})%>
+     
+    </main>
+</body>
+</html>
